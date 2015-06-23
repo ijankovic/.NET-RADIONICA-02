@@ -1,0 +1,5 @@
+C:\Projects\Misc\WPF Demo\TaskList\TaskList.Common\bin\Debug\TaskList.Common.dll
+C:\Projects\Misc\WPF Demo\TaskList\TaskList.Common\bin\Debug\TaskList.Common.pdb
+C:\Projects\Misc\WPF Demo\TaskList\TaskList.Common\obj\Debug\TaskList.Common.csprojResolveAssemblyReference.cache
+C:\Projects\Misc\WPF Demo\TaskList\TaskList.Common\obj\Debug\TaskList.Common.dll
+C:\Projects\Misc\WPF Demo\TaskList\TaskList.Common\obj\Debug\TaskList.Common.pdb

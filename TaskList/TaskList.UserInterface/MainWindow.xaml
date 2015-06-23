@@ -1,0 +1,109 @@
+﻿<Window x:Class="TaskList.UserInterface.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:viewModels="clr-namespace:TaskList.UserInterface.ViewModels" 
+        xmlns:converters="clr-namespace:TaskList.UserInterface.Converters"
+        Title="MainWindow" Height="350" Width="525"
+        Background="LightGray">
+    <Window.DataContext>
+        <!-- 
+            Here we create a TaskListViewModel object and assign it as the DataContext of the Window.
+            We can then bind our controls to the properties of the TaskListViewModel object
+        -->
+        <viewModels:TaskListViewModel/>
+    </Window.DataContext>
+    
+    <!-- Add Converters so we can use them when binding -->
+    <Window.Resources>
+        <converters:BoolInverter x:Key="BoolInverter"/>
+        <converters:BoolToFinished x:Key="BoolToFinished"/>
+    </Window.Resources>
+    <Grid>
+        <!-- Row and Column definitions determine the basic layout: a 3x2 grid -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Users" Style="{StaticResource HeaderStyle}"/>
+        
+        <!-- 
+            StackPanel means it's child elements will be displayed one after the other 
+            Orientation=Horizontal means that children will be layed out from left to right, default is Vertical (up => down)          
+        -->
+        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="Tasks: "  Style="{StaticResource HeaderStyle}"/>
+            <TextBlock Text="{Binding SelectedUser.Name}" Style="{StaticResource HeaderStyle}"/>
+        </StackPanel>
+        
+        <!-- 
+            ListView allows us to bind to collections of objects using the ItemsSource property
+            It also allows us to select an object from the bound collection using the SelectedUser property
+        -->
+        <ListView Grid.Row="1" Grid.Column="0" ItemsSource="{Binding Users}" SelectedItem="{Binding SelectedUser}">
+            <!-- 
+                ItemTemplate determines the look of a single item in the collection 
+                The data context within the template is a single item, in this case a User object
+                Within the template we can bind to the properties of the User object
+            -->
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <!-- ScrollViewer just wraps whatever's inside and adds scrollbars in case the content becomes too big -->
+        <ScrollViewer Grid.Row="1" Grid.Column="1">
+            <!-- ItemsControl is similar to ListView, but does not allow selecting an item -->
+            <ItemsControl ItemsSource="{Binding TasksView}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Owner.Name}" Grid.Column="0"/>
+                            <TextBlock Text="{Binding Description}" Grid.Column="1"/>
+                            
+                            <!-- 
+                                Here we use the BoolToFinished converter to determine what the button will show as content
+                                We also use the BoolInverter to disable the button if Task.IsFinished == true
+                            -->
+                            <Button Grid.Column="2" 
+                                    Content="{Binding IsFinished, Converter={StaticResource BoolToFinished}}" 
+                                    IsEnabled="{Binding IsFinished, Converter={StaticResource BoolInverter}}"
+                                    Click="FinishTask"/>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <!-- Of course, we can nest grids -->
+        <Grid Grid.Row="2" Grid.Column="0" Margin="10" ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            
+            <!-- 
+                UpdateSourceTrigger=PropertyChanged means that the update will happen on every key press
+                By default, it only triggers when we move (click/tab) out of the textbox
+            -->
+            <TextBox Text="{Binding NewTaskDescription, UpdateSourceTrigger=PropertyChanged}" Grid.Column="0"/>
+            <Button Grid.Column="1" 
+                    Content="Add Task" 
+                    IsEnabled="{Binding CanAddTask}"
+                    Click="AddTask"/>
+        </Grid>
+
+    </Grid>
+</Window>
