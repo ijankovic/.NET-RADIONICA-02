@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Windows.Data;
 using TaskList.Common;
 using TaskList.Data.Entities;
+using System.Linq;
 
 namespace TaskList.UserInterface.ViewModels
 {
@@ -23,6 +24,8 @@ namespace TaskList.UserInterface.ViewModels
         {
             get { return !string.IsNullOrWhiteSpace(NewTaskDescription) && SelectedUser.Id > 0; }
         }
+
+    
 
         private string _newTaskDescription;
         public string NewTaskDescription
@@ -86,6 +89,13 @@ namespace TaskList.UserInterface.ViewModels
         public void FinishTask(Task task)
         {
             task.Finish();
+        }
+
+        public void RemoveTask(Task task)
+        {
+            var selectedTask = _tasks.Single(x => x.Description.ToLower().Equals(task.Description.ToLower()));
+            _tasks.Remove(selectedTask);
+            TasksView.Refresh();
         }
 
         /// <summary>

@@ -37,6 +37,13 @@ namespace TaskList.UserInterface
             ViewModel.AddTask();
         }
 
+        private void RemoveTask(object sender, RoutedEventArgs e)
+        {
+            var button = (Button)sender;
+            var task = (Task)button.DataContext;
+            ViewModel.RemoveTask(task);
+        }
+
         private void FinishTask(object sender, RoutedEventArgs e)
         {
             var button = (Button) sender;
