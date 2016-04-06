@@ -5,3 +5,10 @@ C:\Projects\Misc\WPF Demo\TaskList\TaskList.Data\bin\Debug\TaskList.Common.pdb
 C:\Projects\Misc\WPF Demo\TaskList\TaskList.Data\obj\Debug\TaskList.Data.csprojResolveAssemblyReference.cache
 C:\Projects\Misc\WPF Demo\TaskList\TaskList.Data\obj\Debug\TaskList.Data.dll
 C:\Projects\Misc\WPF Demo\TaskList\TaskList.Data\obj\Debug\TaskList.Data.pdb
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.Data\bin\Debug\TaskList.Data.dll
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.Data\bin\Debug\TaskList.Data.pdb
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.Data\bin\Debug\TaskList.Common.dll
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.Data\bin\Debug\TaskList.Common.pdb
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.Data\obj\Debug\TaskList.Data.csprojResolveAssemblyReference.cache
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.Data\obj\Debug\TaskList.Data.dll
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.Data\obj\Debug\TaskList.Data.pdb

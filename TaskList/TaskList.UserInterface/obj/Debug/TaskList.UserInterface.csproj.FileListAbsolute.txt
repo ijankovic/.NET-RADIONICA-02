@@ -18,3 +18,23 @@ C:\Projects\Misc\WPF Demo\TaskList\TaskList.UserInterface\obj\Debug\TaskList.Use
 C:\Projects\Misc\WPF Demo\TaskList\TaskList.UserInterface\obj\Debug\TaskList.UserInterface.csproj.GenerateResource.Cache
 C:\Projects\Misc\WPF Demo\TaskList\TaskList.UserInterface\obj\Debug\TaskList.UserInterface.exe
 C:\Projects\Misc\WPF Demo\TaskList\TaskList.UserInterface\obj\Debug\TaskList.UserInterface.pdb
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.UserInterface\bin\Debug\TaskList.UserInterface.exe.config
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.UserInterface\obj\Debug\TaskList.UserInterface.exe
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.UserInterface\obj\Debug\TaskList.UserInterface.pdb
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.UserInterface\bin\Debug\TaskList.UserInterface.exe
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.UserInterface\bin\Debug\TaskList.UserInterface.pdb
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.UserInterface\bin\Debug\TaskList.Common.dll
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.UserInterface\bin\Debug\TaskList.Data.dll
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.UserInterface\bin\Debug\TaskList.Common.pdb
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.UserInterface\bin\Debug\TaskList.Data.pdb
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.UserInterface\obj\Debug\TaskList.UserInterface.csprojResolveAssemblyReference.cache
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.UserInterface\obj\Debug\App.baml
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.UserInterface\obj\Debug\MainWindow.g.cs
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.UserInterface\obj\Debug\App.g.cs
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.UserInterface\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.UserInterface\obj\Debug\TaskList.UserInterface_MarkupCompile.cache
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.UserInterface\obj\Debug\TaskList.UserInterface_MarkupCompile.lref
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.UserInterface\obj\Debug\MainWindow.baml
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.UserInterface\obj\Debug\TaskList.UserInterface.g.resources
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.UserInterface\obj\Debug\TaskList.UserInterface.Properties.Resources.resources
+C:\VJEZBA1\.NET-RADIONICA-02\TaskList\TaskList.UserInterface\obj\Debug\TaskList.UserInterface.csproj.GenerateResource.Cache
