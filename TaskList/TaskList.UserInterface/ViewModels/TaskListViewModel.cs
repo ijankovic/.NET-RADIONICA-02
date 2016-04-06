@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows.Data;
 using TaskList.Common;
 using TaskList.Data.Entities;
@@ -37,6 +39,14 @@ namespace TaskList.UserInterface.ViewModels
         }
 
         private User _selectedUser = new User {Id = 0, Name = "All"}; // Initialize a "null" user, when selected all users' tasks are shown
+
+        internal void RemoveTask(Task task)
+        {
+            var selectedTask = _tasks.Single(x => x.Description.ToLower().Equals(task.Description.ToLower()));
+            _tasks.Remove(selectedTask);
+            TasksView.Refresh();
+        }
+
         public User SelectedUser
         {
             get { return _selectedUser; }
