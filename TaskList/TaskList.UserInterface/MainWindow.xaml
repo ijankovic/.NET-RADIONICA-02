@@ -69,6 +69,7 @@
                                 <ColumnDefinition Width="40"/>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100" />
                             </Grid.ColumnDefinitions>
                             <TextBlock Text="{Binding Owner.Name}" Grid.Column="0"/>
                             <TextBlock Text="{Binding Description}" Grid.Column="1"/>
@@ -81,6 +82,7 @@
                                     Content="{Binding IsFinished, Converter={StaticResource BoolToFinished}}" 
                                     IsEnabled="{Binding IsFinished, Converter={StaticResource BoolInverter}}"
                                     Click="FinishTask"/>
+                            <Button Grid.Column="3" Content="Remove" Click="RemoveTask"/>
                         </Grid>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
